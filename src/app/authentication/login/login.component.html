@@ -1,0 +1,19 @@
+<div class="tela">
+  <div class="container">
+    <div class="div-img">
+      <img [src]="loginImg" alt="Logo">
+    </div>
+    <div>
+      <input type="text" placeholder="Email" />
+      <input type="password" placeholder="Senha" />
+    </div>
+
+    <div class="forgot">
+      <label [routerLink]="['/forgot-password']">Esqueci minha senha</label>
+    </div>
+
+    <button class="btn-save" [routerLink]="['/home']">Entrar</button>
+    <button class="btn-cancel" [routerLink]="['/register']">Cadastrar</button>
+
+  </div>
+</div>

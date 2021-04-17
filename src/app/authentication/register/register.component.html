@@ -1,0 +1,30 @@
+<div class="tela">
+  <div class="container" *ngIf="!alert">
+    <div class="div-img">
+      <img [src]="registerImg" alt="Logo">
+    </div>
+    <div>
+      <input type="text" placeholder="Nome Completo" />
+      <input type="text" placeholder="Email" />
+      <input type="text" placeholder="Celular" />
+      <input type="password" placeholder="Senha" />
+      <input type="password" placeholder="Confirmar Senha" />
+    </div>
+
+    <button class="btn-save" (click)="cadastrar()">Salvar</button>
+    <button class="btn-cancel" [routerLink]="['/login']">Já possuo conta</button>
+
+  </div>
+
+  <div class="container" *ngIf="alert">
+    <div class="div-img">
+      <img [src]="successImg" alt="Logo">
+    </div>
+    
+    <h2>Seu usuário foi cadastrado com sucesso !</h2>
+    <h3>Confirme seu email para ativar sua conta.</h3>
+
+    <button class="btn-save" [routerLink]="['/login']">Continuar</button>
+
+  </div>
+</div>
